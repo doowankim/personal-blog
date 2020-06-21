@@ -1,9 +1,12 @@
 import React from 'react';
+import Home from './components/Home';
+import GlobalStyle from './GlobalStyle';
 
 const App = () => {
   return (
     <div>
-      <div>Personal Blog</div>
+      <GlobalStyle />
+      <Home />
     </div>
   );
 };
