@@ -4,58 +4,59 @@ import styled from 'styled-components';
 const Home = () => {
   return (
     <Container>
-      <TextContainer>
-        <Text>프론트엔드 개발자 Kei의 블로그</Text>
-        <br />
-        <br />
-        <div style={{color: 'white', fontSize: '18px'}}>
-          <img
-            src="/images/profile_image.jpeg"
-            alt="profileImage"
-            style={{height: '100px', width: '100px', borderRadius: '30%'}}
-          />
-        </div>
-        <div
-          style={{
-            color: 'white',
-            fontSize: '18px',
-            marginLeft: '15px',
-            marginTop: '10px',
-            marginBottom: '10px',
-          }}
-        >
-          <i className="fab fa-instagram" style={{marginRight: '10px'}} />
-          <i className="fab fa-facebook-square" style={{marginRight: '10px'}} />
-          <i className="fas fa-link" />
-        </div>
-        <div style={{color: 'white', fontSize: '18px', marginLeft: '15px'}}>
-          <i className="far fa-envelope" /> kimdw1991@gmail.com
-        </div>
-        <br />
-        <br />
-        <Button>블로그 들어가기</Button>
-        <br />
-        <br />
+      <Wrapper>
+        <TextContainer>
+          <Text>
+            프론트엔드 개발자 <strong>Kei</strong> 블로그
+          </Text>
+          <br />
+          <br />
+          <div>
+            <Image src="/images/profile_image.jpeg" alt="profileImage" />
+          </div>
+          <DetailText>
+            프론트엔드 개발자 Kei의 이야기가 궁금하시다면?
+          </DetailText>
+          <a href="/main">
+            <Button>블로그 들어가기</Button>
+          </a>
+          <IconStyle>
+            <i className="fab fa-github" style={{marginRight: '20px'}} />
+            <i className="fab fa-instagram" style={{marginRight: '20px'}} />
+            <i
+              className="fab fa-facebook-square"
+              style={{marginRight: '20px'}}
+            />
+            <i className="fas fa-link" />
+          </IconStyle>
+          <EmailText>
+            <i className="far fa-envelope" style={{marginRight: '10px'}} />{' '}
+            kimdw1991@gmail.com
+          </EmailText>
+          <br />
+          <br />
 
-        {/* <div style={{color: 'white'}}>© 2020 by Kei. </div> */}
-      </TextContainer>
+          <br />
+          <br />
+
+          {/* <div style={{color: 'white'}}>© 2020 by Kei. </div> */}
+        </TextContainer>
+      </Wrapper>
     </Container>
   );
 };
 
 const Container = styled.div`
-  background-color: #292929;
-  margin-left: 50px;
+  height: 100vh;
+  background: linear-gradient(90deg, #495057 60%, #fff 40%);
 `;
 
 const Wrapper = styled.div`
-  text-align: center;
+  margin-left: 100px;
 `;
 
 const TextContainer = styled.div`
-  position: absolute;
-  top: 30%;
-  bottom: 70%;
+  padding-top: 150px;
 `;
 
 const Text = styled.div`
@@ -64,10 +65,37 @@ const Text = styled.div`
   color: white;
 `;
 
+const DetailText = styled.div`
+  font-size: 15px;
+  color: white;
+  margin-bottom: 10px;
+`;
+
+const Image = styled.img`
+  height: 100px;
+  width: 100px;
+  border-radius: 30%;
+  margin-bottom: 30px;
+`;
+
+const IconStyle = styled.div`
+  margin-left: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #fff;
+`;
+
+const EmailText = styled.div`
+  margin-left: 5px;
+  font-size: 18px;
+  color: #fff;
+`;
+
 const Button = styled.button`
-  font-size: 20px;
-  padding-left: 5px;
-  padding-right: 3px;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
 
@@ -82,8 +110,13 @@ const Button = styled.button`
   &:hover {
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.16);
     transition: 0.35s;
-    background-color: #495057;
-    color: white;
+    background-color: #edf1f6;
+    color: black;
+    outline: 0;
+  }
+
+  &:focus {
+    outline: 0;
   }
 `;
 
