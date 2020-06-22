@@ -68,20 +68,20 @@ const Text = styled.div`
 const DetailText = styled.div`
   font-size: 15px;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 `;
 
 const Image = styled.img`
   height: 100px;
   width: 100px;
   border-radius: 30%;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 `;
 
 const IconStyle = styled.div`
   margin-left: 5px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 18px;
   color: #fff;
 `;
@@ -98,6 +98,7 @@ const Button = styled.button`
   padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
+  margin-bottom: 10px;
 
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.04);
   background-color: #fff;
