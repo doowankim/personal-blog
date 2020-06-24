@@ -23,6 +23,30 @@ const Main = () => {
             <div>작성자 닉네임이 들어갑니다.</div>
             <div>작성 날짜가 들어갑니다.</div>
           </Panel>
+          <Panel>
+            <div>게시글 썸네일이 들어갑니다.</div>
+            <div>게시글 내용이 들어갑니다.</div>
+            <div>작성자 닉네임이 들어갑니다.</div>
+            <div>작성 날짜가 들어갑니다.</div>
+          </Panel>
+          <Panel>
+            <div>게시글 썸네일이 들어갑니다.</div>
+            <div>게시글 내용이 들어갑니다.</div>
+            <div>작성자 닉네임이 들어갑니다.</div>
+            <div>작성 날짜가 들어갑니다.</div>
+          </Panel>
+          <Panel>
+            <div>게시글 썸네일이 들어갑니다.</div>
+            <div>게시글 내용이 들어갑니다.</div>
+            <div>작성자 닉네임이 들어갑니다.</div>
+            <div>작성 날짜가 들어갑니다.</div>
+          </Panel>
+          <Panel>
+            <div>게시글 썸네일이 들어갑니다.</div>
+            <div>게시글 내용이 들어갑니다.</div>
+            <div>작성자 닉네임이 들어갑니다.</div>
+            <div>작성 날짜가 들어갑니다.</div>
+          </Panel>
         </PanelBox>
       </Box>
     </Container>
@@ -64,13 +88,13 @@ const PanelBox = styled.div`
   left: 7%;
   margin-left: -100px;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
   margin-right: 8px;
   padding: 16px;
   border: 1px solid #fff;
   border-radius: 5px;
-  background: #f2eded;
+  background: #fcf9f9;
   box-sizing: border-box;
 `;
 
