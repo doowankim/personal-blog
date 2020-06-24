@@ -21,13 +21,19 @@ const Home = () => {
             <Button>블로그 들어가기</Button>
           </a>
           <IconStyle>
-            <i className="fab fa-github" style={{marginRight: '20px'}} />
-            <i className="fab fa-instagram" style={{marginRight: '20px'}} />
+            <i
+              className="fab fa-github"
+              style={{marginRight: '20px', cursor: 'pointer'}}
+            />
+            <i
+              className="fab fa-instagram"
+              style={{marginRight: '20px', cursor: 'pointer'}}
+            />
             <i
               className="fab fa-facebook-square"
-              style={{marginRight: '20px'}}
+              style={{marginRight: '20px', cursor: 'pointer'}}
             />
-            <i className="fas fa-link" />
+            <i className="fas fa-link" style={{cursor: 'pointer'}} />
           </IconStyle>
           <EmailText>
             <i className="far fa-envelope" style={{marginRight: '10px'}} />{' '}
