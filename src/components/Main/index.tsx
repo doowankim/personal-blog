@@ -7,7 +7,13 @@ const Main = () => {
       <HeaderBox>
         {/* Icon 안에는 Dropdown 메뉴가 들어갑니다. */}
         <Icon className="fas fa-bars" />
-        <Text>Kei's brunch</Text>
+        <Text>
+          <img
+            src="/images/brunch_logo.png"
+            alt="brunchLogo"
+            style={{width: '250px', height: '70px'}}
+          />
+        </Text>
       </HeaderBox>
       <Box>
         <PanelBox>
@@ -76,8 +82,9 @@ const Text = styled.div`
   position: absolute;
   top: 17%;
   left: 51%;
-  margin-top: -100px;
-  margin-left: -70px;
+  margin-top: -128px;
+  margin-left: -130px;
+  cursor: pointer;
 `;
 
 const Box = styled.div``;
