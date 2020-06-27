@@ -65,7 +65,7 @@ const Main = () => {
             <Icon className="fas fa-bars" />
           </span>
           <NavbarDropdownContent>
-            <div style={{ paddingTop: "30px" }}>
+            <div style={{ paddingTop: "40px" }}>
               <Link to="/main">HOME</Link>
             </div>
             <div style={{ marginTop: "25px" }}>
