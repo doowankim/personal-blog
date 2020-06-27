@@ -6,9 +6,7 @@ const Home = () => {
     <Container>
       <Wrapper>
         <TextContainer>
-          <Text>
-            프론트엔드 개발자 <strong>Kei</strong> 블로그
-          </Text>
+          <Text>프론트엔드 개발자 Kei 블로그</Text>
           <br />
           <br />
           <div>
@@ -21,19 +19,18 @@ const Home = () => {
             <Button>블로그 들어가기</Button>
           </a>
           <IconStyle>
-            <i
-              className="fab fa-github"
-              style={{ marginRight: "20px", cursor: "pointer" }}
-            />
-            <i
-              className="fab fa-instagram"
-              style={{ marginRight: "20px", cursor: "pointer" }}
-            />
-            <i
-              className="fab fa-facebook-square"
-              style={{ marginRight: "20px", cursor: "pointer" }}
-            />
-            <i className="fas fa-link" style={{ cursor: "pointer" }} />
+            <IconWrapper href="https://github.com/doowankim">
+              <Icon className="fab fa-github" />
+            </IconWrapper>
+            <IconWrapper href="https://www.instagram.com/dw_kevin0/">
+              <Icon className="fab fa-instagram" />
+            </IconWrapper>
+            <IconWrapper href="https://www.facebook.com/doowan.kim.3">
+              <Icon className="fab fa-facebook-square" />
+            </IconWrapper>
+            <IconWrapper href="https://velog.io/@kimdw1991">
+              <Icon className="fas fa-link" />
+            </IconWrapper>
           </IconStyle>
           <EmailText>
             <i className="far fa-envelope" style={{ marginRight: "10px" }} />{" "}
@@ -90,6 +87,19 @@ const IconStyle = styled.div`
   margin-bottom: 20px;
   font-size: 18px;
   color: #fff;
+`
+
+const Icon = styled.i`
+  margin-right: 20px;
+  cursor: pointer;
+`
+
+const IconWrapper = styled.a`
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
 `
 
 const EmailText = styled.div`
