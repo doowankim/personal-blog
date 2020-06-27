@@ -1,7 +1,7 @@
-import React from "react";
-import Moment from "react-moment";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import React from "react"
+import Moment from "react-moment"
+import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 const Main = () => {
   const postData = [
@@ -54,36 +54,28 @@ const Main = () => {
       nickname: "kei",
       date: "2020-06-14T07:54:30.000Z",
     },
-  ];
+  ]
 
   return (
     <Container>
       <HeaderBox>
         {/* Icon 안에는 Dropdown 메뉴가 들어갑니다. */}
-        <DropdownContainer>
-          <DropdownList>
-            <DropdownItem>
-              <Link to="#">
-                <Icon className="fas fa-bars" />
-              </Link>
-              <ol
-                style={{
-                  flexDirection: "column",
-                  alignItems: "flex-start",
-                  position: "absolute",
-                  left: "0",
-                  marginTop: "1em",
-                  visibility: "hidden",
-                  display: "none",
-                }}
-              >
-                <li>
-                  <Link to="#">Big Widgets</Link>
-                </li>
-              </ol>
-            </DropdownItem>
-          </DropdownList>
-        </DropdownContainer>
+        <NavbarDropdown>
+          <span>
+            <Icon className="fas fa-bars" />
+          </span>
+          <NavbarDropdownContent>
+            <div style={{ paddingTop: "30px" }}>
+              <Link to="/main">HOME</Link>
+            </div>
+            <div style={{ marginTop: "25px" }}>
+              <Link to="/profile">PROFILE</Link>
+            </div>
+            <div style={{ marginTop: "25px" }}>
+              <Link to="/portfolio">PORTFOLIO</Link>
+            </div>
+          </NavbarDropdownContent>
+        </NavbarDropdown>
         <Text>
           <img
             src="/images/brunch_logo.png"
@@ -117,49 +109,44 @@ const Main = () => {
         </PanelBox>
       </Box>
     </Container>
-  );
-};
+  )
+}
 
-const Container = styled.div``;
+const Container = styled.div``
 
 const HeaderBox = styled.div`
   width: 100%;
   height: 80px;
   border: 1px solid #ddd;
   background-color: #ffffff;
-`;
+`
 
-const DropdownContainer = styled.nav`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-`;
+const NavbarDropdownContent = styled.div`
+  display: none;
+  position: absolute;
+  background-color: none;
+  margin-left: 12px;
+  border-radius: 5px;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0, 2);
+  padding: 12px 16px 10px 10px;
+  z-index: 1;
+`
 
-const DropdownList = styled.ol`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  margin: 0 auto;
-  padding: 0.5em 0;
-  list-style: none;
-`;
-
-const DropdownItem = styled.li`
-  background: gray;
-  border-bottom: 5px solid lightgray;
-`;
+const NavbarDropdown = styled.div`
+  position: relative;
+  display: inline-block;
+  &:hover ${NavbarDropdownContent} {
+    display: block;
+  }
+`
 
 const Icon = styled.i`
-  position: absolute;
-  top: 17%;
-  left: 7%;
-  margin-top: -100px;
-  margin-left: -70px;
+  margin-top: 30px;
+  margin-left: 30px;
+
   cursor: pointer;
-`;
+`
 
 const Text = styled.div`
   font-size: 18px;
@@ -169,9 +156,9 @@ const Text = styled.div`
   margin-top: -128px;
   margin-left: -130px;
   cursor: pointer;
-`;
+`
 
-const Box = styled.div``;
+const Box = styled.div``
 
 const PanelBox = styled.div`
   position: absolute;
@@ -187,7 +174,7 @@ const PanelBox = styled.div`
   border-radius: 5px;
   background: #fcf9f9;
   box-sizing: border-box;
-`;
+`
 
 const Panel = styled.button`
   position: relative;
@@ -212,23 +199,23 @@ const Panel = styled.button`
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.16);
     transition: 0.35s;
   }
-`;
+`
 
 const PanelTitle = styled.div`
   font-size: 20px;
   font-weight: 400;
   color: #514e4e;
   padding-bottom: 20px;
-`;
+`
 
 const PanelText = styled.div`
   font-size: 15px;
   color: #adadad;
   padding-bottom: 20px;
-`;
+`
 
-const PanelNickname = styled.div``;
+const PanelNickname = styled.div``
 
-const PanelDate = styled.div``;
+const PanelDate = styled.div``
 
-export default Main;
+export default Main

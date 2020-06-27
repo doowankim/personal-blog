@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react"
+import styled from "styled-components"
 
 const Home = () => {
   return (
@@ -23,20 +23,20 @@ const Home = () => {
           <IconStyle>
             <i
               className="fab fa-github"
-              style={{marginRight: '20px', cursor: 'pointer'}}
+              style={{ marginRight: "20px", cursor: "pointer" }}
             />
             <i
               className="fab fa-instagram"
-              style={{marginRight: '20px', cursor: 'pointer'}}
+              style={{ marginRight: "20px", cursor: "pointer" }}
             />
             <i
               className="fab fa-facebook-square"
-              style={{marginRight: '20px', cursor: 'pointer'}}
+              style={{ marginRight: "20px", cursor: "pointer" }}
             />
-            <i className="fas fa-link" style={{cursor: 'pointer'}} />
+            <i className="fas fa-link" style={{ cursor: "pointer" }} />
           </IconStyle>
           <EmailText>
-            <i className="far fa-envelope" style={{marginRight: '10px'}} />{' '}
+            <i className="far fa-envelope" style={{ marginRight: "10px" }} />{" "}
             kimdw1991@gmail.com
           </EmailText>
           <br />
@@ -49,40 +49,40 @@ const Home = () => {
         </TextContainer>
       </Wrapper>
     </Container>
-  );
-};
+  )
+}
 
 const Container = styled.div`
   height: 100vh;
   background: linear-gradient(90deg, #495057 60%, #fff 40%);
-`;
+`
 
 const Wrapper = styled.div`
   margin-left: 100px;
-`;
+`
 
 const TextContainer = styled.div`
   padding-top: 150px;
-`;
+`
 
 const Text = styled.div`
   font-size: 30px;
   font-weight: bold;
   color: white;
-`;
+`
 
 const DetailText = styled.div`
   font-size: 15px;
   color: white;
   margin-bottom: 30px;
-`;
+`
 
 const Image = styled.img`
   height: 100px;
   width: 100px;
   border-radius: 30%;
   margin-bottom: 50px;
-`;
+`
 
 const IconStyle = styled.div`
   margin-left: 5px;
@@ -90,13 +90,13 @@ const IconStyle = styled.div`
   margin-bottom: 20px;
   font-size: 18px;
   color: #fff;
-`;
+`
 
 const EmailText = styled.div`
   margin-left: 5px;
   font-size: 18px;
   color: #fff;
-`;
+`
 
 const Button = styled.button`
   font-size: 18px;
@@ -125,6 +125,6 @@ const Button = styled.button`
   &:focus {
     outline: 0;
   }
-`;
+`
 
-export default Home;
+export default Home
