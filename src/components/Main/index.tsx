@@ -66,13 +66,16 @@ const Main = () => {
           </span>
           <NavbarDropdownContent>
             <div style={{ paddingTop: "40px" }}>
-              <Link to="/main">HOME</Link>
+              <SLink to="/main">HOME</SLink>
             </div>
             <div style={{ marginTop: "25px" }}>
-              <Link to="/profile">PROFILE</Link>
+              <SLink to="/post">POST</SLink>
             </div>
             <div style={{ marginTop: "25px" }}>
-              <Link to="/portfolio">PORTFOLIO</Link>
+              <SLink to="/profile">PROFILE</SLink>
+            </div>
+            <div style={{ marginTop: "25px" }}>
+              <SLink to="/portfolio">PORTFOLIO</SLink>
             </div>
           </NavbarDropdownContent>
         </NavbarDropdown>
@@ -138,6 +141,14 @@ const NavbarDropdown = styled.div`
   display: inline-block;
   &:hover ${NavbarDropdownContent} {
     display: block;
+  }
+`
+
+const SLink = styled(Link)`
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: black;
   }
 `
 
