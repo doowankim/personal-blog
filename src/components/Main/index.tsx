@@ -7,6 +7,7 @@ const Main = () => {
   const postData = [
     {
       id: 1,
+      imageURL: "/images/wwdc.jpeg",
       title: "애플 2020 WWDC 발표하다!",
       text:
         "첫 번째, iOS14" +
@@ -19,6 +20,7 @@ const Main = () => {
     },
     {
       id: 2,
+      imageURL: "/images/wwdc.jpeg",
       title: "구속은 아니지만, 처벌은 [____]?",
       text:
         "서울역 한복판에서 한 남성이 생판 모르는 여성을 폭행한 사건. 피해자는 광대뼈가 부러져 수술을 받았는데요. 경찰이 해당 남성을 찾아내 구속영장을 신청했지만, 법원이 구속영장을 2번이나 기각해서 사람들이 분노하고 있어요." +
@@ -29,6 +31,7 @@ const Main = () => {
     },
     {
       id: 3,
+      imageURL: "/images/wwdc.jpeg",
       title: "부글부글 남중국해",
       text:
         "남중국해 종종 들어봤는데, 뭐더라?" +
@@ -42,6 +45,7 @@ const Main = () => {
     },
     {
       id: 4,
+      imageURL: "/images/wwdc.jpeg",
       title: "지구가 슬퍼하는 소식",
       text:
         "지구온난화와 댕댕이: 댕댕이 좋아하는 뉴니커, 모두 주목! 요 며칠 정말 더웠죠. 어쩌면 강아지도 많이 힘들었을지 몰라요. 강아지도 사람이 열병에 걸리는 것처럼 열에 취약하다는 연구 결과가 있었습니다. 다음과 같은 경우, 뜨거워지는 지구에 더 힘들어 할 거라고:" +
@@ -92,18 +96,27 @@ const Main = () => {
           {postData.map((detailData: any, index: number) => (
             <React.Fragment key={index}>
               <Panel>
+                <PanelImage>
+                  <img
+                    src="/images/wwdc.jpeg"
+                    alt="wwdc2020"
+                    style={{ width: "100px", height: "100px" }}
+                  />
+                </PanelImage>
                 <PanelTitle>{detailData.title}</PanelTitle>
-                <PanelText>{detailData.text.substring(0, 230)}...</PanelText>
+                <PanelText>{detailData.text.substring(0, 180)}...</PanelText>
                 <PanelDate>
                   <PanelNickname>
-                    작성일 ・
+                    <span>작성일 </span>
+                    {/* <span> ・</span> */}
                     <Moment
                       format="YYYY/MM/DD HH:mm"
-                      style={{ paddingLeft: "10px", paddingRight: "10px" }}
+                      style={{ paddingLeft: "5px", paddingRight: "20px" }}
                     >
                       {detailData.date}
                     </Moment>
-                    ・ by {detailData.nickname}
+                    {/* <span> ・</span> */}
+                    <span> by {detailData.nickname}</span>
                   </PanelNickname>
                 </PanelDate>
               </Panel>
@@ -162,10 +175,8 @@ const Icon = styled.i`
 const Text = styled.div`
   font-size: 18px;
   position: absolute;
-  top: 17%;
-  left: 51%;
-  margin-top: -128px;
-  margin-left: -130px;
+  top: 1%;
+  left: 42%;
   cursor: pointer;
 `
 
@@ -173,14 +184,11 @@ const Box = styled.div``
 
 const PanelBox = styled.div`
   position: absolute;
-  top: 17%;
-  left: 7%;
-  margin-left: -100px;
+  left: 0;
   width: 100%;
   height: 100%;
-  position: relative;
   margin-right: 8px;
-  padding: 16px;
+  padding-top: 16px;
   border: 1px solid #fff;
   border-radius: 5px;
   background: #fcf9f9;
@@ -189,7 +197,7 @@ const PanelBox = styled.div`
 
 const Panel = styled.button`
   position: relative;
-  left: 9.8%;
+  left: 6%;
   width: 550px;
   flex-basis: 256px;
   flex-grow: 1;
@@ -212,6 +220,8 @@ const Panel = styled.button`
   }
 `
 
+const PanelImage = styled.div``
+
 const PanelTitle = styled.div`
   font-size: 20px;
   font-weight: 400;
@@ -227,6 +237,12 @@ const PanelText = styled.div`
 
 const PanelNickname = styled.div``
 
-const PanelDate = styled.div``
+const PanelDate = styled.div`
+  display: block;
+  overflow: hidden;
+  padding-top: 20px;
+  font-size: 13px;
+  color: #959595;
+`
 
 export default Main
