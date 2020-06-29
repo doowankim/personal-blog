@@ -92,9 +92,31 @@ const Main = () => {
 
   return (
     <Container>
-      <HeaderBox>
-        {/* Icon 안에는 Dropdown 메뉴가 들어갑니다. */}
+      <Header>
         <NavbarDropdown>
+          <HeaderMenu>
+            <Icon className="fas fa-bars" />
+          </HeaderMenu>
+          <NavbarDropdownContent>
+            <div style={{ paddingTop: "40px" }}>
+              <SLink to="/main">HOME</SLink>
+            </div>
+            <div style={{ marginTop: "25px" }}>
+              <SLink to="/post">POST</SLink>
+            </div>
+            <div style={{ marginTop: "25px" }}>
+              <SLink to="/profile">PROFILE</SLink>
+            </div>
+            <div style={{ marginTop: "25px" }}>
+              <SLink to="/portfolio">PORTFOLIO</SLink>
+            </div>
+          </NavbarDropdownContent>
+        </NavbarDropdown>
+        <HeaderLogo>
+          <LogoImage src="/images/brunch_logo.png" alt="brunchLogo" />
+        </HeaderLogo>
+        {/* Icon 안에는 Dropdown 메뉴가 들어갑니다. */}
+        {/* <NavbarDropdown>
           <span>
             <Icon className="fas fa-bars" />
           </span>
@@ -119,11 +141,11 @@ const Main = () => {
             alt="brunchLogo"
             style={{ width: "250px", height: "70px" }}
           />
-        </Text>
-      </HeaderBox>
+        </Text> */}
+      </Header>
       <Box>
         <PanelBox>
-          {postData.map((detailData: any, index: number) => (
+          {/* {postData.map((detailData: any, index: number) => (
             <React.Fragment key={index}>
               <Panel>
                 <PanelImage>
@@ -138,20 +160,20 @@ const Main = () => {
                 <PanelDate>
                   <PanelNickname>
                     <span>작성일 </span>
-                    {/* <span> ・</span> */}
+                    <span> ・</span>
                     <Moment
                       format="YYYY/MM/DD HH:mm"
                       style={{ paddingLeft: "5px", paddingRight: "20px" }}
                     >
                       {detailData.date}
                     </Moment>
-                    {/* <span> ・</span> */}
+                    <span> ・</span>
                     <span> by {detailData.nickname}</span>
                   </PanelNickname>
                 </PanelDate>
               </Panel>
             </React.Fragment>
-          ))}
+          ))} */}
         </PanelBox>
       </Box>
     </Container>
@@ -159,6 +181,29 @@ const Main = () => {
 }
 
 const Container = styled.div``
+
+const Header = styled.div`
+  height: 80px;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+`
+
+const HeaderMenu = styled.div`
+  position: absolute;
+  float: left;
+  margin-top: 30px;
+  margin-left: 30px;
+  cursor: pointer;
+`
+
+const HeaderLogo = styled.div`
+  text-align: center;
+`
+
+const LogoImage = styled.img`
+  width: 250px;
+  height: 70px;
+`
 
 const HeaderBox = styled.div`
   height: 80px;
@@ -170,6 +215,7 @@ const NavbarDropdownContent = styled.div`
   display: none;
   position: absolute;
   background-color: none;
+  margin-top: 50px;
   margin-left: 12px;
   border-radius: 5px;
   min-width: 130px;
@@ -180,7 +226,8 @@ const NavbarDropdownContent = styled.div`
 
 const NavbarDropdown = styled.div`
   position: relative;
-  display: inline-block;
+  width: 100px;
+  /* display: inline-block; */
   &:hover ${NavbarDropdownContent} {
     display: block;
   }
@@ -194,12 +241,7 @@ const SLink = styled(Link)`
   }
 `
 
-const Icon = styled.i`
-  margin-top: 30px;
-  margin-left: 30px;
-
-  cursor: pointer;
-`
+const Icon = styled.i``
 
 const Text = styled.div`
   font-size: 18px;
@@ -215,7 +257,7 @@ const Box = styled.div`
 
 const PanelBox = styled.div`
   position: absolute;
-  top: -10%;
+  top: 0;
   left: 0;
   bottom: 0;
   right: 0;
@@ -225,7 +267,7 @@ const PanelBox = styled.div`
   padding-top: 16px;
   border: 1px solid #fff;
   border-radius: 5px;
-  background: #fcf9f9;
+  background: red;
   box-sizing: border-box;
 `
 
