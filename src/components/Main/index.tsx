@@ -115,44 +115,17 @@ const Main = () => {
         <HeaderLogo>
           <LogoImage src="/images/brunch_logo.png" alt="brunchLogo" />
         </HeaderLogo>
-        {/* Icon 안에는 Dropdown 메뉴가 들어갑니다. */}
-        {/* <NavbarDropdown>
-          <span>
-            <Icon className="fas fa-bars" />
-          </span>
-          <NavbarDropdownContent>
-            <div style={{ paddingTop: "40px" }}>
-              <SLink to="/main">HOME</SLink>
-            </div>
-            <div style={{ marginTop: "25px" }}>
-              <SLink to="/post">POST</SLink>
-            </div>
-            <div style={{ marginTop: "25px" }}>
-              <SLink to="/profile">PROFILE</SLink>
-            </div>
-            <div style={{ marginTop: "25px" }}>
-              <SLink to="/portfolio">PORTFOLIO</SLink>
-            </div>
-          </NavbarDropdownContent>
-        </NavbarDropdown>
-        <Text>
-          <img
-            src="/images/brunch_logo.png"
-            alt="brunchLogo"
-            style={{ width: "250px", height: "70px" }}
-          />
-        </Text> */}
       </Header>
       <Box>
         <PanelBox>
-          {/* {postData.map((detailData: any, index: number) => (
+          {postData.map((detailData: any, index: number) => (
             <React.Fragment key={index}>
               <Panel>
                 <PanelImage>
                   <img
                     src="/images/wwdc.jpeg"
                     alt="wwdc2020"
-                    style={{ width: "200px", height: "150px" }}
+                    style={{ width: "30px", height: "30px" }}
                   />
                 </PanelImage>
                 <PanelTitle>{detailData.title}</PanelTitle>
@@ -160,20 +133,20 @@ const Main = () => {
                 <PanelDate>
                   <PanelNickname>
                     <span>작성일 </span>
-                    <span> ・</span>
+                    <span> ・ </span>
                     <Moment
                       format="YYYY/MM/DD HH:mm"
                       style={{ paddingLeft: "5px", paddingRight: "20px" }}
                     >
                       {detailData.date}
                     </Moment>
-                    <span> ・</span>
+                    <span> ・ </span>
                     <span> by {detailData.nickname}</span>
                   </PanelNickname>
                 </PanelDate>
               </Panel>
             </React.Fragment>
-          ))} */}
+          ))}
         </PanelBox>
       </Box>
     </Container>
@@ -203,12 +176,6 @@ const HeaderLogo = styled.div`
 const LogoImage = styled.img`
   width: 250px;
   height: 70px;
-`
-
-const HeaderBox = styled.div`
-  height: 80px;
-  border: 1px solid #ddd;
-  background-color: #ffffff;
 `
 
 const NavbarDropdownContent = styled.div`
@@ -243,47 +210,32 @@ const SLink = styled(Link)`
 
 const Icon = styled.i``
 
-const Text = styled.div`
-  font-size: 18px;
-  position: absolute;
-  top: 1%;
-  left: 42%;
-  cursor: pointer;
-`
-
 const Box = styled.div`
+  position: relative;
   width: 100%;
+  height: 90vh auto;
+  background: #f2eded;
 `
 
 const PanelBox = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-
-  margin: 10% auto;
-  margin-right: 8px;
-  padding-top: 16px;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  background: red;
+  position: relative;
+  display: block;
+  padding-top: 30px;
+  width: 950px;
+  left: 50%;
+  transform: translateX(-48%);
+  height: 90vh auto;
   box-sizing: border-box;
 `
 
 const Panel = styled.button`
-  position: relative;
-  left: 6%;
-  width: 550px;
-  flex-basis: 256px;
-  flex-grow: 1;
-  height: 350px;
-  padding: 18px 18px 18px 20px;
+  width: 900px;
+  height: 200px;
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.04);
   box-sizing: border-box;
-  margin: 0 4px 8px;
+  margin-bottom: 20px;
   cursor: pointer;
   transition: 0.35s;
   color: #495057;
