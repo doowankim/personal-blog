@@ -1,7 +1,7 @@
 import React from "react"
 import Moment from "react-moment"
 import styled from "styled-components"
-import { Link } from "react-router-dom"
+import Header from "../Header"
 
 const Main = () => {
   const postData = [
@@ -92,58 +92,33 @@ const Main = () => {
 
   return (
     <Container>
-      <Header>
-        <NavbarDropdown>
-          <HeaderMenu>
-            <Icon className="fas fa-bars" />
-          </HeaderMenu>
-          <NavbarDropdownContent>
-            <div style={{ paddingTop: "40px" }}>
-              <SLink to="/main">HOME</SLink>
-            </div>
-            <div style={{ marginTop: "25px" }}>
-              <SLink to="/post">POST</SLink>
-            </div>
-            <div style={{ marginTop: "25px" }}>
-              <SLink to="/profile">PROFILE</SLink>
-            </div>
-            <div style={{ marginTop: "25px" }}>
-              <SLink to="/portfolio">PORTFOLIO</SLink>
-            </div>
-          </NavbarDropdownContent>
-        </NavbarDropdown>
-        <HeaderLogo>
-          <LogoImage src="/images/brunch_logo.png" alt="brunchLogo" />
-        </HeaderLogo>
-      </Header>
+      <Header />
       <Box>
         <PanelBox>
           {postData.map((detailData: any, index: number) => (
             <React.Fragment key={index}>
               <Panel>
-                <PanelImage>
-                  <img
-                    src="/images/wwdc.jpeg"
-                    alt="wwdc2020"
-                    style={{ width: "30px", height: "30px" }}
-                  />
-                </PanelImage>
-                <PanelTitle>{detailData.title}</PanelTitle>
-                <PanelText>{detailData.text.substring(0, 180)}...</PanelText>
-                <PanelDate>
-                  <PanelNickname>
-                    <span>작성일 </span>
-                    <span> ・ </span>
-                    <Moment
-                      format="YYYY/MM/DD HH:mm"
-                      style={{ paddingLeft: "5px", paddingRight: "20px" }}
-                    >
-                      {detailData.date}
-                    </Moment>
-                    <span> ・ </span>
-                    <span> by {detailData.nickname}</span>
-                  </PanelNickname>
-                </PanelDate>
+                <PanelDescriptionBox>
+                  <PanelTitle>{detailData.title}</PanelTitle>
+                  <PanelText>{detailData.text.substring(0, 180)}...</PanelText>
+                  <PanelDate>
+                    <PanelNickname>
+                      <span>작성일 </span>
+                      <span> ・ </span>
+                      <Moment
+                        format="YYYY/MM/DD HH:mm"
+                        style={{ paddingLeft: "5px", paddingRight: "20px" }}
+                      >
+                        {detailData.date}
+                      </Moment>
+                      <span> ・ </span>
+                      <span> by {detailData.nickname}</span>
+                    </PanelNickname>
+                  </PanelDate>
+                </PanelDescriptionBox>
+                <PanelImageBox>
+                  <PanelImage src="/images/wwdc.jpeg" alt="wwdc2020" />
+                </PanelImageBox>
               </Panel>
             </React.Fragment>
           ))}
@@ -154,61 +129,6 @@ const Main = () => {
 }
 
 const Container = styled.div``
-
-const Header = styled.div`
-  height: 80px;
-  border: 1px solid #ddd;
-  background-color: #ffffff;
-`
-
-const HeaderMenu = styled.div`
-  position: absolute;
-  float: left;
-  margin-top: 30px;
-  margin-left: 30px;
-  cursor: pointer;
-`
-
-const HeaderLogo = styled.div`
-  text-align: center;
-`
-
-const LogoImage = styled.img`
-  width: 250px;
-  height: 70px;
-`
-
-const NavbarDropdownContent = styled.div`
-  display: none;
-  position: absolute;
-  background-color: none;
-  margin-top: 50px;
-  margin-left: 12px;
-  border-radius: 5px;
-  min-width: 130px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0, 2);
-  padding: 12px 16px 10px 10px;
-  z-index: 1;
-`
-
-const NavbarDropdown = styled.div`
-  position: relative;
-  width: 100px;
-  /* display: inline-block; */
-  &:hover ${NavbarDropdownContent} {
-    display: block;
-  }
-`
-
-const SLink = styled(Link)`
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
-    color: black;
-  }
-`
-
-const Icon = styled.i``
 
 const Box = styled.div`
   position: relative;
@@ -235,6 +155,8 @@ const Panel = styled.button`
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.04);
   box-sizing: border-box;
+  padding-left: 30px;
+  padding-right: 30px;
   margin-bottom: 20px;
   cursor: pointer;
   transition: 0.35s;
@@ -248,7 +170,20 @@ const Panel = styled.button`
   }
 `
 
-const PanelImage = styled.div``
+const PanelImageBox = styled.div`
+  width: 220px;
+  float: right;
+`
+
+const PanelImage = styled.img`
+  width: 200px;
+  height: 150px;
+`
+
+const PanelDescriptionBox = styled.div`
+  float: left;
+  width: 600px;
+`
 
 const PanelTitle = styled.div`
   font-size: 20px;
@@ -259,6 +194,7 @@ const PanelTitle = styled.div`
 
 const PanelText = styled.div`
   font-size: 15px;
+
   color: #adadad;
   padding-bottom: 20px;
 `
