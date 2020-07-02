@@ -1,13 +1,17 @@
 import React from "react"
+import styled from "styled-components"
+
 import Header from "../Header"
 
 const Profile = () => {
   return (
-    <div>
+    <Container>
       <Header />
       <div>Profile Page</div>
-    </div>
+    </Container>
   )
 }
+
+const Container = styled.div``
 
 export default Profile

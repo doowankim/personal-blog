@@ -72,7 +72,7 @@ const NavbarDropdownContent = styled.div`
 const NavbarDropdown = styled.div`
   position: relative;
   width: 100px;
-  /* display: inline-block; */
+
   &:hover ${NavbarDropdownContent} {
     display: block;
   }
