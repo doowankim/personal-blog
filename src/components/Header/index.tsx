@@ -29,6 +29,9 @@ const Header = () => {
           <LogoImage src="/images/brunch_logo.png" alt="brunchLogo" />
         </Link>
       </HeaderLogo>
+      <IconWrapper href="https://github.com/doowankim">
+        <GitIcon className="fab fa-github" />
+      </IconWrapper>
     </HeaderBox>
   )
 }
@@ -87,5 +90,21 @@ const SLink = styled(Link)`
 `
 
 const Icon = styled.i``
+
+const IconWrapper = styled.a`
+  margin-top: -50px;
+  margin-right: 30px;
+  font-size: 30px;
+  float: right;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+`
+
+const GitIcon = styled.i`
+  cursor: pointer;
+`
 
 export default Header

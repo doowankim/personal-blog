@@ -36,6 +36,20 @@ const Portfolio = () => {
           </div>
         </Description>
       </DescriptionBox>
+      <SkillsBox>
+        <div>Skills</div>
+        <h4>Language</h4>
+        <p>JavaScript(Intermediate), C++(Intermediate), Java(Basic)</p>
+        <h4>Web Skills</h4>
+        <p>
+          HTML(Intermediate), CSS(Intermediate), JavaScript(Intermediate),
+          React.js(Intermediate), Redux(Basic)
+        </p>
+        <h4>FrameWork</h4>
+        <p>Bootstrap(Intermediate), Express.js(Intermediate)</p>
+        <h4>DataBase</h4>
+        <p>MongoDB(Basic)</p>
+      </SkillsBox>
     </Container>
   )
 }
@@ -82,8 +96,7 @@ const DescriptionBox = styled.div`
   display: flex;
   animation: ${FadeInUp} 1.2s;
   position: relative;
-  padding-top: 30px;
-  margin-top: 50px;
+  margin-top: 70px;
   width: 1000px;
   left: 50%;
   transform: translateX(-48%);
@@ -105,6 +118,10 @@ const Description = styled.h2`
   line-height: 26px;
   font-style: italic;
   margin-left: 30px;
+`
+
+const SkillsBox = styled.div`
+  padding-top: 250px;
 `
 
 export default Portfolio
