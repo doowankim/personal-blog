@@ -1,6 +1,8 @@
 import React from "react"
 import Moment from "react-moment"
 import styled from "styled-components"
+import { useHistory } from "react-router-dom"
+
 import Header from "../Header"
 
 const Main = () => {
@@ -60,6 +62,8 @@ const Main = () => {
     },
   ]
 
+  const history = useHistory()
+
   return (
     <Container>
       <Header />
@@ -77,7 +81,7 @@ const Main = () => {
           </TagBox>
           {postData.map((detailData: any, index: number) => (
             <React.Fragment key={index}>
-              <Panel>
+              <Panel onClick={() => history.push("/post")}>
                 <PanelDescriptionBox>
                   <PanelTitle>{detailData.title}</PanelTitle>
                   <PanelText>{detailData.text.substring(0, 250)}...</PanelText>

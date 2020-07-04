@@ -104,8 +104,4 @@ const Description = styled.h2`
   margin-left: 30px;
 `
 
-const SkillsBox = styled.div`
-  padding-top: 150px;
-`
-
 export default Profile
