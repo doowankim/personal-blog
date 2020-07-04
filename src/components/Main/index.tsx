@@ -158,9 +158,10 @@ const PanelBox = styled.div`
 `
 
 const Panel = styled.button`
+  display: inline-block;
   width: 900px;
   height: 200px;
-  border: 1px solid #ddd;
+  border: none;
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.04);
   box-sizing: border-box;
@@ -171,11 +172,12 @@ const Panel = styled.button`
   transition: 0.35s;
   color: #495057;
   background: white;
-  display: inline-block;
+  outline: none;
 
   &:hover {
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.16);
     transition: 0.35s;
+    outline: none;
   }
 `
 
