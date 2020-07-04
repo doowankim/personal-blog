@@ -10,9 +10,8 @@ const Portfolio = () => {
       <Heading>
         <HeadingText>About me</HeadingText>
       </Heading>
-      <HeadingLine>
-        <p>저를 소개합니다.</p>
-      </HeadingLine>
+      <HeadingLine />
+      <p style={{ textAlign: "center" }}>저를 소개합니다.</p>
       <DescriptionBox>
         <Image src="/images/avatar.jpeg" alt="avatar" />
         <Description>
@@ -31,13 +30,15 @@ const Portfolio = () => {
             </span>
             <br />
             <br />
-            저는 제 목표를 <b>'늘 성장하는 개발자'</b>로 삼아서 꾸준히 공부하여{" "}
-            <b>'항상 성장하는 개발자'</b>로 남고 싶습니다.
+            저는 제 목표를 <strong>'늘 성장하는 개발자'</strong>로 삼아서 꾸준히
+            공부하여 <strong>'항상 성장하는 개발자'</strong>로 남고 싶습니다.
           </div>
         </Description>
       </DescriptionBox>
       <SkillsBox>
-        <div>Skills</div>
+        <Heading>
+          <HeadingText>Skills</HeadingText>
+        </Heading>
         <h4>Language</h4>
         <p>JavaScript(Intermediate), C++(Intermediate), Java(Basic)</p>
         <h4>Web Skills</h4>
@@ -65,15 +66,43 @@ const FadeInUp = keyframes`
   }
 `
 
+const bounceInLeft = keyframes`
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+
+  80% {
+    -webkit-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+`
+
 const Container = styled.div`
   width: 100%;
   height: 90vh auto;
-  background: #f2eded;
+  background: #f4f2f2;
 `
 
 const Heading = styled.div`
   margin-top: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 `
 
 const HeadingText = styled.h2`
@@ -88,7 +117,6 @@ const HeadingLine = styled.div`
   height: 1px;
   width: 107px;
   background: #333;
-  margin-top: 10px;
   margin-bottom: 20px;
 `
 

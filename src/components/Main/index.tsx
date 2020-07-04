@@ -65,6 +65,16 @@ const Main = () => {
       <Header />
       <Box>
         <PanelBox>
+          <TagBox>
+            <DevTag>Javascript</DevTag>
+            <DevTag>HTML</DevTag>
+            <DevTag>CSS</DevTag>
+            <DevTag>React</DevTag>
+            <DevTag>Redux</DevTag>
+            <DevTag>AWS</DevTag>
+            <DevTag>Github</DevTag>
+            <DevTag>Tech</DevTag>
+          </TagBox>
           {postData.map((detailData: any, index: number) => (
             <React.Fragment key={index}>
               <Panel>
@@ -104,7 +114,32 @@ const Box = styled.div`
   position: relative;
   width: 100%;
   height: 90vh auto;
-  background: #f2eded;
+  background: #f4f2f2;
+`
+const TagBox = styled.div`
+  display: flex;
+`
+
+const DevTag = styled.div`
+  width: 0 auto;
+  height: 30px;
+  background: #f4f2f2;
+  color: #495057;
+  text-align: center;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background: #495057;
+    color: #f4f2f2;
+    transition: 0.35s;
+  }
 `
 
 const PanelBox = styled.div`
