@@ -19,9 +19,6 @@ const Header = () => {
           <div style={{ marginTop: "25px" }}>
             <SLink to="/profile">PROFILE</SLink>
           </div>
-          <div style={{ marginTop: "25px" }}>
-            <SLink to="/portfolio">PORTFOLIO</SLink>
-          </div>
         </NavbarDropdownContent>
       </NavbarDropdown>
       <HeaderLogo>

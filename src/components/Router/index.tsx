@@ -5,7 +5,6 @@ import Home from "../Home"
 import Main from "../Main"
 import Post from "../Post"
 import Profile from "../Profile"
-import Portfolio from "../Portfolio"
 
 const Router = () => {
   return (
@@ -16,7 +15,6 @@ const Router = () => {
           <Route path="/main" component={Main} />
           <Route path="/post" component={Post} />
           <Route path="/profile" component={Profile} />
-          <Route path="/portfolio" component={Portfolio} />
         </Switch>
       </>
     </BrowserRouter>
