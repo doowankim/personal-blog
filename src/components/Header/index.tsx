@@ -37,7 +37,7 @@ const LogoImage = styled.img`
 
 const IconWrapper = styled.a`
   margin-top: -50px;
-  margin-right: 80px;
+  margin-right: 90px;
   font-size: 30px;
   float: right;
   text-decoration: none;
