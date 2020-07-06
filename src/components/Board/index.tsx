@@ -1,17 +1,30 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
 const Board = () => {
+  const [data, setData] = useState({
+    title: "",
+    text: "",
+  })
+
+  const handleChange = (e: any) => {
+    setData({ ...data, [e.target.name]: e.target.value })
+  }
+  const handleSubmit = (e: any) => {
+    e.preventDefault()
+  }
   return (
     <Container>
       <Wrapper>
         <div>Board Page</div>
-        <WriteTitle>
-          <Title name="title" />
-        </WriteTitle>
-        <WriteText>
-          <Text name="text" />
-        </WriteText>
+        <form onSubmit={handleSubmit}>
+          <WriteTitle>
+            <Title name="title" onChange={handleChange} />
+          </WriteTitle>
+          <WriteText>
+            <Text name="text" onChange={handleChange} />
+          </WriteText>
+        </form>
       </Wrapper>
     </Container>
   )
