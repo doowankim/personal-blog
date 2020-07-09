@@ -79,13 +79,14 @@ const Title = styled.input`
 
 const WriteText = styled.div``
 
-const Text = styled.input`
+const Text = styled.textarea`
   min-height: 335px;
   min-width: 950px;
   border: none;
   margin-bottom: 50px;
   font-size: 24px;
   outline: 0;
+  overflow: auto;
   &::placeholder {
     font-size: 24px;
     font-weight: 300;
