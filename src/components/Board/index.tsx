@@ -110,6 +110,8 @@ const Text = styled.textarea`
 	}
 `;
 
+const Icon = styled.i``;
+
 const Button = styled.button`
 	width: 120px;
 	height: 40px;
