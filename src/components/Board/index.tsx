@@ -5,6 +5,16 @@ const Board = () => {
 	const [title, isTitle] = useState<string>('');
 	const [text, isText] = useState<string>('');
 	const [data, setData] = useState<object>({});
+	const [image, setImage] = useState({ preview: '', raw: '' });
+
+	const handleImageChange = (e: any) => {
+		if (e.target.files.length) {
+			setImage({
+				preview: URL.createObjectURL(e.target.files[0]),
+				raw: e.target.files[0],
+			});
+		}
+	};
 
 	const onTitleChange = (e: any) => {
 		isTitle(e.target.value);
@@ -13,13 +23,26 @@ const Board = () => {
 	const onTextChange = (e: any) => {
 		isText(e.target.value);
 	};
-	const handleSubmit = (e: any) => {
+
+	const handleSubmit = async (e: any) => {
 		e.preventDefault();
 
 		const postData = {
 			title: title,
 			text: text,
 		};
+
+		const formData = new FormData();
+		formData.append('image', image.raw);
+
+		await fetch('YOUR_URL', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'multipart/form-data',
+			},
+			body: formData,
+		});
+
 		setData(postData);
 	};
 
@@ -44,15 +67,32 @@ const Board = () => {
 							value={text}
 						/>
 					</WriteText>
-					<div>
-						<i
-							className="far fa-image"
-							style={{
-								fontSize: '25px',
-								marginBottom: '50px',
-							}}
-						></i>
-					</div>
+					{/* 이미지 업로드가 들어갑니다. */}
+					<label htmlFor="upload-button">
+						{image.preview ? (
+							<img src={image.preview} alt="dummy" width="150" height="150" />
+						) : (
+							<>
+								<span className="fa-stack fa-2x mt-3 mb-2">
+									<i
+										className="far fa-image"
+										style={{
+											fontSize: '25px',
+											marginLeft: '20px',
+											cursor: 'pointer',
+										}}
+									></i>
+								</span>
+							</>
+						)}
+					</label>
+					<input
+						type="file"
+						id="upload-button"
+						style={{ display: 'none' }}
+						onChange={handleImageChange}
+					/>
+					<br />
 					<Button type="submit">등록하기</Button>
 				</form>
 			</Wrapper>
@@ -99,7 +139,6 @@ const Text = styled.textarea`
 	min-height: 505px;
 	min-width: 950px;
 	border: 1px solid #ddd;
-	margin-bottom: 20px;
 	font-size: 24px;
 	outline: 0;
 	overflow: auto;
@@ -109,8 +148,6 @@ const Text = styled.textarea`
 		height: 40px;
 	}
 `;
-
-const Icon = styled.i``;
 
 const Button = styled.button`
 	width: 120px;
