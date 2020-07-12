@@ -70,7 +70,26 @@ const Board = () => {
 					{/* 이미지 업로드가 들어갑니다. */}
 					<label htmlFor="upload-button">
 						{image.preview ? (
-							<img src={image.preview} alt="dummy" width="150" height="150" />
+							<>
+								<span className="fa-stack fa-2x mt-3 mb-2">
+									<i
+										className="far fa-image"
+										style={{
+											fontSize: '25px',
+											marginLeft: '20px',
+											cursor: 'pointer',
+										}}
+									></i>
+								</span>
+								<span>
+									<img
+										src={image.preview}
+										alt="dummy"
+										width="150"
+										height="130"
+									/>
+								</span>
+							</>
 						) : (
 							<>
 								<span className="fa-stack fa-2x mt-3 mb-2">
@@ -106,7 +125,7 @@ const Container = styled.div`
 	margin-top: 80px;
 	width: 1000px;
 	height: 800px;
-	border: 1px solid #ddd;
+	border: none;
 	padding: 20px 20px 20px 20px;
 	left: 50%;
 	transform: translateX(-50%);
