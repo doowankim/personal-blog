@@ -46,18 +46,18 @@ const Post = () => {
 					<TagBox>
 						<DevTag>{postData.tag}</DevTag>
 					</TagBox>
+					<Comment
+						name="comment"
+						placeholder="댓글을 작성해주세요"
+						onChange={onHandleChange}
+						value={comment}
+					/>
+					<br />
+					<br />
+					<br />
+					<CommentButton type="submit">댓글 작성</CommentButton>
 				</DetailBox>
 			</Wrapper>
-			<Comment
-				name="comment"
-				placeholder="댓글을 작성해주세요"
-				onChange={onHandleChange}
-				value={comment}
-			/>
-			<br />
-			<br />
-			<br />
-			<CommentButton type="submit">댓글 작성</CommentButton>
 		</Container>
 	);
 };
@@ -137,8 +137,22 @@ const Comment = styled.textarea`
 
 const CommentButton = styled.button`
 	position: relative;
-	left: 76%;
-	transform: translateX(-24%);
+	left: 90%;
+	transform: translateX(-10%);
+	height: 40px;
+	width: 100px;
+	background-color: #495057;
+	color: white;
+	border-radius: 5px;
+	outline: none;
+	transition: 0.35s;
+	&:hover {
+		background: #333232;
+		transition: 0.35s;
+	}
+	&:focus {
+		outline: none;
+	}
 `;
 
 export default Post;
