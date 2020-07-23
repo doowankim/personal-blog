@@ -19,7 +19,7 @@ const postData = {
 	date: '2020-06-02T07:54:30.000Z',
 };
 
-const Post = () => {
+const PostDetail = () => {
 	const [comment, setComment] = useState<string>('');
 
 	const onHandleChange = (e: any) => {
@@ -132,6 +132,7 @@ const Comment = styled.textarea`
 	width: 1000px;
 	min-height: 100px;
 	border: none;
+	border-radius: 5px;
 	outline: none;
 `;
 
@@ -155,4 +156,4 @@ const CommentButton = styled.button`
 	}
 `;
 
-export default Post;
+export default PostDetail;

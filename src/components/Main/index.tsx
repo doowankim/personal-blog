@@ -73,12 +73,11 @@ const Main = () => {
 					<DevTag>AWS</DevTag>
 					<DevTag>Github</DevTag>
 					<DevTag>Tech</DevTag>
-					<DevTag>Economy</DevTag>
 				</TagBox>
 				<PanelBox>
 					{postData.map((detailData: any, index: number) => (
 						<React.Fragment key={index}>
-							<Panel onClick={() => history.push('/post')}>
+							<Panel onClick={() => history.push('/postDetail')}>
 								<PanelDescriptionBox>
 									<PanelTitle>{detailData.title}</PanelTitle>
 									<PanelText>{detailData.text.substring(0, 250)}...</PanelText>
