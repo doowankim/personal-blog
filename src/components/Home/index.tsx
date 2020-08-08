@@ -118,7 +118,7 @@ const Button = styled.button`
 	margin-bottom: 10px;
 
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.04);
-	background-color: #fff;
+	background-color: #ffffff;
 	color: #495057;
 	border-radius: 5px;
 
@@ -129,8 +129,7 @@ const Button = styled.button`
 	&:hover {
 		box-shadow: 0 6px 24px rgba(0, 0, 0, 0.16);
 		transition: 0.35s;
-		background-color: ${darken(0.2, '#bfb9b9')};
-		color: #f9f9f9;
+		background-color: #f9f9f9;
 		outline: 0;
 	}
 
