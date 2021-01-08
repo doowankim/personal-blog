@@ -1,37 +1,47 @@
 {
-	"name": "personal-blog-server",
-	"version": "1.0.0",
-	"description": "personal-blog-server",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "nodemon server.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/doowankim/personal-blog.git"
-	},
-	"author": "doowankim",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/doowankim/personal-blog/issues"
-	},
-	"homepage": "https://github.com/doowankim/personal-blog#readme",
-	"private": true,
-	"dependencies": {
-		"body-parser": "^1.19.0",
-		"dotenv": "^8.2.0",
-		"gravatar": "^1.8.1",
-		"koa": "^2.13.0",
-		"koa-router": "^10.0.0",
-		"modules": "^0.4.0",
-		"mongoose": "^5.11.9",
-		"morgan": "^1.10.0"
-	},
-	"devDependencies": {
-		"nodemon": "^2.0.6"
-	},
-	"keywords": [
-		"blog"
-	]
+  "name": "personal-blog",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/styled-components": "^5.1.0",
+    "moment": "^2.27.0",
+    "polished": "^3.6.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-moment": "^0.9.7",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "styled-components": "^5.1.1",
+    "styled-reset": "^4.1.6",
+    "typescript": "~3.7.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
