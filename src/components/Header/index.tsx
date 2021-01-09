@@ -1,70 +1,34 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "react-router-dom"
+import React from 'react';
+import * as Styled from './styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAtom, faCode, faUserAlt } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
-  return (
-    <HeaderBox>
-      <HeaderLogo>
-        <Link to="/main">
-          <LogoImage src="/images/brunch_logo.png" alt="brunchLogo" />
-        </Link>
-      </HeaderLogo>
-      <IconWrapper href="/profile">
-        <ProfileIcon className="fas fa-address-card" />
-      </IconWrapper>
-      <IconWrapper2 href="https://github.com/doowankim">
-        <GitIcon className="fab fa-github" />
-      </IconWrapper2>
-    </HeaderBox>
-  )
-}
+	return (
+		<Styled.HeaderBox>
+			<Link to="/main">
+				<Styled.Logo>
+					<FontAwesomeIcon icon={faCode} /> <span>Kei</span>
+				</Styled.Logo>
+			</Link>
+			<Styled.LeftMenu>
+				<div>
+					<FontAwesomeIcon icon={faAtom} />
+				</div>
+				<div>
+					<Link to="/profile">
+						<FontAwesomeIcon icon={faUserAlt} />
+					</Link>
+				</div>
+				<span>
+					<div onClick={() => window.open('https://github.com/doowankim')}>
+						Github
+					</div>
+				</span>
+			</Styled.LeftMenu>
+		</Styled.HeaderBox>
+	);
+};
 
-const HeaderBox = styled.div`
-  height: 80px;
-  border: 2px solid #ddd;
-  background-color: #ffffff;
-`
-
-const HeaderLogo = styled.div`
-  text-align: center;
-`
-
-const LogoImage = styled.img`
-  width: 250px;
-  height: 70px;
-`
-
-const IconWrapper = styled.a`
-  margin-top: -50px;
-  margin-right: 90px;
-  font-size: 30px;
-  float: right;
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
-    color: black;
-  }
-`
-
-const IconWrapper2 = styled.a`
-  margin-top: -50px;
-  margin-right: 30px;
-  font-size: 30px;
-  float: right;
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
-    color: black;
-  }
-`
-
-const GitIcon = styled.i`
-  cursor: pointer;
-`
-
-const ProfileIcon = styled.i`
-  cursor: pointer;
-`
-
-export default Header
+export default Header;
