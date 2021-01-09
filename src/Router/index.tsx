@@ -1,26 +1,39 @@
 import React from 'react';
+import styled from 'styled-components';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
-import Home from '../components/Home';
-import Main from '../components/Main';
-import PostDetail from '../components/PostDetail';
-import Profile from '../components/Profile';
-import Board from '../components/Board';
+import Header from '../components/Header';
+import { Home, Profile, BoardView, BoardDetail } from '../containers';
 
 const Router = () => {
 	return (
 		<BrowserRouter>
 			<>
-				<Switch>
-					<Route exact path="/" component={Home} />
-					<Route path="/main" component={Main} />
-					<Route path="/postDetail" component={PostDetail} />
-					<Route path="/profile" component={Profile} />
-					<Route path="/board" component={Board} />
-				</Switch>
+				<Header />
+				<Wrapper>
+					<Switch>
+						<Route exact path="/">
+							<Home />
+						</Route>
+						<Route exact path="/profile">
+							<Profile />
+						</Route>
+						<Route exact path="/board">
+							<BoardView />
+						</Route>
+						<Route exact path="/boardDetail">
+							<BoardDetail />
+						</Route>
+					</Switch>
+				</Wrapper>
 			</>
 		</BrowserRouter>
 	);
 };
+
+const Wrapper = styled.div`
+	width: 630px;
+	min-width: 480px;
+	margin: 0 auto;
+`;
 
 export default Router;

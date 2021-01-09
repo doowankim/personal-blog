@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
 	return (
 		<Styled.HeaderBox>
-			<Link to="/main">
+			<Link to="/">
 				<Styled.Logo>
 					<FontAwesomeIcon icon={faCode} /> <span>Kei</span>
 				</Styled.Logo>

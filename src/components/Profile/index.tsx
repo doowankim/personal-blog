@@ -6,7 +6,6 @@ import Header from '../Header';
 const Profile = () => {
 	return (
 		<Container>
-			<Header />
 			<Heading>
 				<HeadingText>About me</HeadingText>
 			</Heading>

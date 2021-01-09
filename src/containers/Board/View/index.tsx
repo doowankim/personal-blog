@@ -113,7 +113,7 @@ const Board = () => {
 						onChange={handleImageChange}
 					/>
 					<br />
-					<Button type="submit">등록하기</Button>
+					<Button type="submit">Publish</Button>
 				</form>
 			</Wrapper>
 		</Container>
@@ -121,15 +121,10 @@ const Board = () => {
 };
 
 const Container = styled.div`
-	position: relative;
-	display: block;
-	margin-top: 80px;
-	width: 1000px;
+	margin-top: 40px;
+	width: 100%;
 	height: 800px;
 	border: none;
-	padding: 20px 20px 20px 20px;
-	left: 50%;
-	transform: translateX(-50%);
 `;
 
 const Wrapper = styled.div`
@@ -140,7 +135,7 @@ const WriteTitle = styled.div``;
 
 const Title = styled.input`
 	height: 50px;
-	min-width: 950px;
+	width: 100%;
 	border: none;
 	border-bottom: 1px solid #eee;
 	font-size: 38px;
@@ -156,8 +151,8 @@ const Title = styled.input`
 const WriteText = styled.div``;
 
 const Text = styled.textarea`
+	width: 100%;
 	min-height: 505px;
-	min-width: 950px;
 	border: 1px solid #ddd;
 	font-size: 24px;
 	outline: 0;
