@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Styled from './styles';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 
 interface cardProps {
 	title?: string;
@@ -9,9 +9,18 @@ interface cardProps {
 
 const Card = (props: cardProps) => {
 	const history = useHistory();
+	const data = { ...props };
+
 	return (
 		<>
-			<Styled.Card onClick={() => history.push('/boardDetail')}>
+			<Styled.Card
+				onClick={() =>
+					history.push({
+						pathname: '/boardDetail',
+						state: { data: data },
+					})
+				}
+			>
 				<Styled.CardWrapper>
 					<Styled.CardTitle>{props.title}</Styled.CardTitle>
 					<Styled.CardDescription>{props.description}</Styled.CardDescription>
