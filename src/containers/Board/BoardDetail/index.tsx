@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import * as Styled from './styles';
+import { Tag } from '../../../components';
 
 const BoardDetail = () => {
 	const [comment, setComment] = useState<any>({
@@ -36,8 +37,8 @@ const BoardDetail = () => {
 						</div>
 					</Styled.WriterBox>
 					<Styled.TagBox>
-						<div>Tag</div>
-						<div>Tag</div>
+						<Tag body="Tag" />
+						<Tag body="Tag" />
 					</Styled.TagBox>
 				</Styled.BottomBox>
 				<form onSubmit={handleSubmit}>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as color from '../../../components/color/index';
 import { darken } from 'polished';
 
 export const Container = styled.div`
@@ -8,7 +9,7 @@ export const Container = styled.div`
 
 export const TitleWrapper = styled.div`
 	padding: 33px 40px;
-	color: #495057;
+	color: ${color.Colors.primary};
 	font-size: 24px;
 	font-weight: bold;
 `;
@@ -16,13 +17,14 @@ export const TitleWrapper = styled.div`
 export const RowLine = styled.div`
 	width: 90%;
 	height: 1px;
-	background: #ddd;
+	background: ${color.Colors.line};
 	margin: 0 auto;
 `;
 
 export const DescriptionWrapper = styled.div`
 	width: 100%;
 	padding: 52px 40px;
+	line-height: 25px;
 	word-wrap: break-word;
 `;
 
@@ -38,7 +40,7 @@ export const WriterBox = styled.div`
 		width: 100px;
 		height: 100px;
 		border-radius: 50%;
-		background: #ddd;
+		background: ${color.Colors.line};
 	}
 
 	.userBox {
@@ -49,7 +51,7 @@ export const WriterBox = styled.div`
 		}
 		.date {
 			font-size: 12px;
-			color: #495057;
+			color: ${color.Colors.primary};
 			margin-top: 10px;
 		}
 	}
@@ -58,18 +60,6 @@ export const WriterBox = styled.div`
 export const TagBox = styled.div`
 	display: flex;
 	margin-top: 35px;
-
-	div {
-		padding: 8px 15px;
-		border-radius: 15px;
-		background: #dfeef5;
-		color: #6cadce;
-		margin-left: 10px;
-
-		&:first-child {
-			margin-left: 0;
-		}
-	}
 `;
 
 export const CommentBox = styled.div`
@@ -78,7 +68,7 @@ export const CommentBox = styled.div`
 
 export const CommentCount = styled.div`
 	margin: 0 0 10px 20px;
-	color: #495057;
+	color: ${color.Colors.primary};
 	font-weight: bold;
 `;
 
@@ -89,7 +79,7 @@ export const CommentUserName = styled.div`
 
 	input {
 		height: 30px;
-		border: 1px solid #ddd;
+		border: 1px solid ${color.Colors.line};
 		border-radius: 5px;
 		padding-left: 15px;
 
@@ -105,7 +95,7 @@ export const CommentText = styled.div`
 	input {
 		width: 100%;
 		height: 80px;
-		border: 1px solid #ddd;
+		border: 1px solid ${color.Colors.line};
 		border-radius: 5px;
 		padding-left: 15px;
 
@@ -117,7 +107,7 @@ export const CommentText = styled.div`
 	textarea {
 		width: 100%;
 		height: 80px;
-		border: 1px solid #ddd;
+		border: 1px solid ${color.Colors.line};
 		border-radius: 5px;
 		padding: 10px 15px;
 
@@ -130,9 +120,9 @@ export const CommentText = styled.div`
 export const CommentButton = styled.button`
 	float: right;
 	height: 35px;
-	background: #6bacce;
-	color: #fff;
-	border: 1px solid #6bacce;
+	background: ${color.Colors.blue};
+	color: ${color.Colors.white};
+	border: 1px solid ${color.Colors.blue};
 	border-radius: 5px;
 	padding: 0 10px;
 	margin-top: 15px;
@@ -144,7 +134,7 @@ export const CommentButton = styled.button`
 	}
 
 	&:hover {
-		background: ${darken(0.1, '#6BACCE')};
+		background: ${darken(0.1, `${color.Colors.blue}`)};
 		transition: 0.35s;
 	}
 `;
