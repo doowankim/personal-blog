@@ -27,17 +27,19 @@ export const LeftMenu = styled.div`
 	& > div {
 		width: 30px;
 		height: 30px;
-		background: #495057;
-		color: #fff;
+		background: #fff;
+		color: #495057;
 		text-align: center;
 		line-height: 30px;
 		margin-left: 10px;
+		border: 1px solid #ddd;
 		border-radius: 5px;
 		transition: 0.25s;
 		cursor: pointer;
 
 		&:hover {
-			background: ${darken(0.3, '#495057')};
+			background: #495057;
+			color: #fff;
 			transition: 0.25s;
 		}
 	}

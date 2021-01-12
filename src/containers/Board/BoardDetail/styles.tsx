@@ -44,10 +44,12 @@ export const WriterBox = styled.div`
 		margin-left: 50px;
 
 		.name {
-			font-weight: bold;
+			font-size: 18px;
 		}
 		.date {
+			font-size: 12px;
 			color: #495057;
+			margin-top: 10px;
 		}
 	}
 `;
@@ -79,13 +81,9 @@ export const CommentCount = styled.div`
 	font-weight: bold;
 `;
 
-export const CommentDetailBox = styled.div`
-	/* border: 1px solid #ddd;
-	border-radius: 5px; */
-`;
+export const CommentDetailBox = styled.div``;
 
 export const CommentUserName = styled.div`
-	/* border-bottom: 1px solid #ddd; */
 	padding: 7px;
 
 	input {
