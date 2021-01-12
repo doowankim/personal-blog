@@ -9,7 +9,6 @@ interface cardProps {
 
 const Card = (props: cardProps) => {
 	const history = useHistory();
-	const data = { ...props };
 
 	return (
 		<>

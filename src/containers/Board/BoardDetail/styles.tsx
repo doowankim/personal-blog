@@ -3,7 +3,6 @@ import { darken } from 'polished';
 
 export const Container = styled.div`
 	width: 100%;
-	border: 1px solid #ddd;
 	margin-top: 85px;
 `;
 
@@ -63,8 +62,8 @@ export const TagBox = styled.div`
 	div {
 		padding: 8px 15px;
 		border-radius: 15px;
-		background: #fcf2f8;
-		color: #d374a6;
+		background: #dfeef5;
+		color: #6cadce;
 		margin-left: 10px;
 
 		&:first-child {
@@ -114,14 +113,26 @@ export const CommentText = styled.div`
 			outline: none;
 		}
 	}
+
+	textarea {
+		width: 100%;
+		height: 80px;
+		border: 1px solid #ddd;
+		border-radius: 5px;
+		padding: 10px 15px;
+
+		&:focus {
+			outline: none;
+		}
+	}
 `;
 
 export const CommentButton = styled.button`
 	float: right;
 	height: 35px;
-	background: #ba5793;
+	background: #6bacce;
 	color: #fff;
-	border: 1px solid #ba5793;
+	border: 1px solid #6bacce;
 	border-radius: 5px;
 	padding: 0 10px;
 	margin-top: 15px;
@@ -133,7 +144,7 @@ export const CommentButton = styled.button`
 	}
 
 	&:hover {
-		background: ${darken(0.1, '#ba5793')};
+		background: ${darken(0.1, '#6BACCE')};
 		transition: 0.35s;
 	}
 `;

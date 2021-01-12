@@ -32,7 +32,7 @@ const BoardDetail = () => {
 						<div className="avatar" />
 						<div className="userBox">
 							<div className="name">작성자 : 김두완</div>
-							<div className="date">작성일 : 2020-01-08 12:52 PM</div>
+							<div className="date">작성일 : 2020-01-08 12:52</div>
 						</div>
 					</Styled.WriterBox>
 					<Styled.TagBox>
@@ -53,10 +53,10 @@ const BoardDetail = () => {
 								/>
 							</Styled.CommentUserName>
 							<Styled.CommentText>
-								<input
+								<textarea
 									name="comment"
 									value={comment?.comment}
-									placeholder="덧글을 작성해주세요"
+									placeholder="소중한 댓글을 작성해주세요"
 									onChange={handleCommentChange}
 								/>
 								<Styled.CommentButton type="submit">
