@@ -13,14 +13,7 @@ const Card = (props: cardProps) => {
 
 	return (
 		<>
-			<Styled.Card
-				onClick={() =>
-					history.push({
-						pathname: '/boardDetail',
-						state: { data: data },
-					})
-				}
-			>
+			<Styled.Card onClick={() => history.push('/boardDetail')}>
 				<Styled.CardWrapper>
 					<Styled.CardTitle>{props.title}</Styled.CardTitle>
 					<Styled.CardDescription>{props.description}</Styled.CardDescription>

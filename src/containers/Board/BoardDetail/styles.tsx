@@ -22,7 +22,9 @@ export const RowLine = styled.div`
 `;
 
 export const DescriptionWrapper = styled.div`
+	width: 100%;
 	padding: 52px 40px;
+	word-wrap: break-word;
 `;
 
 export const BottomBox = styled.div`
