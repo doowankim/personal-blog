@@ -4,7 +4,8 @@ export const HeaderBox = styled.div`
 	display: flex;
 	width: 100%;
 	height: 80px;
-	border: 2px solid #ddd;
+	border-bottom: 2px solid #ddd;
+	box-shadow: 1px 2px 1px gray;
 	background-color: #fff;
 	padding: 0 40px;
 	justify-content: space-between;
@@ -12,16 +13,17 @@ export const HeaderBox = styled.div`
 `;
 
 export const Logo = styled.div`
+	font-size: 1.8em;
 	cursor: pointer;
 	span {
 		margin-left: 5px;
-		font-size: 18px;
-		font-weight: bold;
+		font-weight: 800;
 	}
 `;
 
-export const LeftMenu = styled.div`
+export const RightMenu = styled.div`
 	display: flex;
+	font-size: 1.4em;
 
 	& > div {
 		width: 30px;

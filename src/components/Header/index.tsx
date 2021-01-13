@@ -12,7 +12,7 @@ const Header = () => {
 					<FontAwesomeIcon icon={faCode} /> <span>Kei</span>
 				</Styled.Logo>
 			</Link>
-			<Styled.LeftMenu>
+			<Styled.RightMenu>
 				<div>
 					<FontAwesomeIcon icon={faAtom} />
 				</div>
@@ -26,7 +26,7 @@ const Header = () => {
 						Github
 					</div>
 				</span>
-			</Styled.LeftMenu>
+			</Styled.RightMenu>
 		</Styled.HeaderBox>
 	);
 };

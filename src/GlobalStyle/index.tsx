@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
 const globalStyles = createGlobalStyle`
@@ -7,11 +7,15 @@ const globalStyles = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
+  button, input, textarea {
+    outline: none;
+  }
   * {
     box-sizing: border-box;
   }
   body {
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10px;
+    font-family: 'Nanum Gothic', sans-serif;
   }
 `;
 

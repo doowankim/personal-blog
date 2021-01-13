@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import * as Styled from './styles';
-import { Tag } from '../../../components';
 
 const BoardDetail = () => {
 	const [comment, setComment] = useState<any>({
@@ -33,12 +32,15 @@ const BoardDetail = () => {
 						<div className="avatar" />
 						<div className="userBox">
 							<div className="name">작성자 : 김두완</div>
-							<div className="date">작성일 : 2020-01-08 12:52</div>
+							<div className="date">2020-01-08 12:52</div>
 						</div>
 					</Styled.WriterBox>
 					<Styled.TagBox>
-						<Tag body="Tag" />
-						<Tag body="Tag" />
+						{data.tag.map((d: any, index: number) => (
+							<React.Fragment key={index}>
+								<div>#{d}</div>
+							</React.Fragment>
+						))}
 					</Styled.TagBox>
 				</Styled.BottomBox>
 				<form onSubmit={handleSubmit}>
@@ -85,6 +87,7 @@ const data = {
 		'console.log(Month);' +
 		'console.log(Day);' +
 		'console.log(Time);',
+	tag: ['Javascript', 'React'],
 };
 
 export default BoardDetail;

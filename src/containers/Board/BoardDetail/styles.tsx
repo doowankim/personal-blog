@@ -25,6 +25,7 @@ export const DescriptionWrapper = styled.div`
 	width: 100%;
 	padding: 52px 40px;
 	line-height: 25px;
+	font-size: 1.4em;
 	word-wrap: break-word;
 `;
 
@@ -40,17 +41,17 @@ export const WriterBox = styled.div`
 		width: 100px;
 		height: 100px;
 		border-radius: 50%;
-		background: ${color.Colors.line};
+		background: url('/images/avatar.jpeg') center / cover;
 	}
 
 	.userBox {
 		margin-left: 50px;
 
 		.name {
-			font-size: 18px;
+			font-size: 1.2em;
 		}
 		.date {
-			font-size: 12px;
+			font-size: 1em;
 			color: ${color.Colors.primary};
 			margin-top: 10px;
 		}
@@ -60,6 +61,11 @@ export const WriterBox = styled.div`
 export const TagBox = styled.div`
 	display: flex;
 	margin-top: 35px;
+
+	div {
+		color: ${color.Colors.blue};
+		margin-right: 10px;
+	}
 `;
 
 export const CommentBox = styled.div`

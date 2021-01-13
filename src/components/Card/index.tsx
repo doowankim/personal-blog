@@ -3,8 +3,7 @@ import * as Styled from './styles';
 import { useHistory } from 'react-router-dom';
 
 interface cardProps {
-	title?: string;
-	description?: string;
+	data?: any;
 }
 
 const Card = (props: cardProps) => {
@@ -12,12 +11,15 @@ const Card = (props: cardProps) => {
 
 	return (
 		<>
-			<Styled.Card onClick={() => history.push('/boardDetail')}>
-				<Styled.CardWrapper>
-					<Styled.CardTitle>{props.title}</Styled.CardTitle>
-					<Styled.CardDescription>{props.description}</Styled.CardDescription>
-				</Styled.CardWrapper>
-			</Styled.Card>
+			<Styled.BoardItem>
+				<Styled.Wrapper>
+					<Styled.Title onClick={() => history.push('/boardDetail')}>
+						{props.data.title}
+					</Styled.Title>
+					<Styled.Description>{props.data.description}</Styled.Description>
+					<Styled.Tag>#{props.data.tag}</Styled.Tag>
+				</Styled.Wrapper>
+			</Styled.BoardItem>
 		</>
 	);
 };
