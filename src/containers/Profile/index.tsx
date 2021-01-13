@@ -174,6 +174,16 @@ const Profile = () => {
 						<SkillTabBox body="React" />
 					</div>
 				</Styled.Experience>
+				<Styled.Experience>
+					<div className="projectName">Stabilization</div>
+					<div>
+						<div>∙ 21.01 ~ </div>
+					</div>
+					<div className="skill" style={{ display: 'flex' }}>
+						<SkillTabBox body="Typescript" />
+						<SkillTabBox body="React" />
+					</div>
+				</Styled.Experience>
 			</div>
 		</Styled.Container>
 	);
