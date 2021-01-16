@@ -2,7 +2,7 @@
 
 ## 개인블로그 제작
 
-- 웹 프론트엔드(Typescript/ Hook / Redux / styled-components)
+- 웹 프론트엔드(Typescript/ React / Redux / styled-components)
 
 #### 페이지 구상
 
