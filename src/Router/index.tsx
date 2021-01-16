@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Header from '../components/Header';
+import { Header, Footer } from '../components';
 import { Home, Profile, BoardView, BoardDetail } from '../containers';
 
 const Router = () => {
@@ -25,6 +25,7 @@ const Router = () => {
 						</Route>
 					</Switch>
 				</Wrapper>
+				<Footer />
 			</>
 		</BrowserRouter>
 	);
